@@ -14,5 +14,9 @@ namespace XamarinBlackjack
         {
             InitializeComponent();
         }
+
+        void NewGameButton_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }

@@ -11,6 +11,6 @@ namespace XamarinBlackjack.Models
     {
         public Color Color { get; set; }
         public CardSuitEnum Suit { get; set; }
-        public string FaceValue { get; set; }
+        public CardFaceValueEnum FaceValue { get; set; }
     }
 }
