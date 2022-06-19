@@ -19,12 +19,14 @@
     <None Remove="Enums\" />
     <None Remove="Controllers\" />
     <None Remove="Tools\" />
+    <None Remove="Models\PlayerModels\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Enums\" />
     <Folder Include="Controllers\" />
     <Folder Include="Tools\" />
+    <Folder Include="Models\PlayerModels\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="GamePage.xaml.cs">

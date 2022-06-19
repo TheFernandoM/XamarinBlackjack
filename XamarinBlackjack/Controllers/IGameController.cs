@@ -6,14 +6,14 @@ namespace XamarinBlackjack.Controllers
 {
     public interface IGameController
     {
-        public void SetupGame();
+        void DrawTopCardIntoHand(HandModel hand);
 
-        public void ResetGame();
+        void SetupGame(int numberOfDecks);
 
-        public void StartGame();
+        void ResetGame();
 
-        public int CalculateHandValue(Hand hand);
+        void StartGame();
 
-        public void EnactPlayerAction(PlayerActionEnum playerAction);
+        void EnactPlayerAction(PlayerActionEnum playerAction);
     }
 }

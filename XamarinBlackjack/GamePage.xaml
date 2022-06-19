@@ -9,7 +9,16 @@
 
             </StackLayout>
             <StackLayout>
-                <Frame>
+                <Frame BorderColor="DarkGreen" x:Name="DealerFrame">
+
+                </Frame>
+                <Frame BorderColor="Black" x:Name="MiddleFrame">
+
+                </Frame>
+                <Frame BorderColor="Purple" x:Name="PlayerFrame">
+
+                </Frame>
+                <Frame BorderColor="Black" x:Name="PlayerActionFrame">
 
                 </Frame>
             </StackLayout>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using XamarinBlackjack.Enums;
 using XamarinBlackjack.Models;
+using XamarinBlackjack.Tools;
 
 namespace XamarinBlackjack.Controllers
 {
@@ -10,42 +11,43 @@ namespace XamarinBlackjack.Controllers
     /// </summary>
     public class GameController :IGameController
     {
-        public List<Deck> Decks { get; set; }
+        public Deck Deck { get; set; } // The deck of cards that all players draw from
+        public BasePlayerModel Player { get; set; }
+        public Deck DiscardDeck { get; set; } // Discard pile is actually a deck too
 
         public void ResetGame()
         {
             throw new NotImplementedException();
         }
 
-        public void SetupGame()
+        public void SetupGame(int numberOfDecks)
         {
-            Decks.Add(new Deck());
+            for(int i = 0; i < numberOfDecks; i++)
+            {
+                // Merge the current deck with a new full deck of unshuffled cards.
+                Deck = DeckTools.MergeDecks(new List<Deck>() { Deck, DeckTools.FillDeckWithUnshuffledCards(new Deck())});
+            }
         }
 
         public void StartGame()
         {
             throw new NotImplementedException();
         }
-        public int CalculateHandValue(Hand hand)
-        {
-            foreach(var deck in Decks)
-            {
-                foreach(var card in deck.Cards)
-                {
-                    switch (card)
-                    {
-                        default:
-                            break;
-                        //TO DO
-                    }
-                }
-            }
-            return -1; // TO DO
-        }
 
         public void EnactPlayerAction(PlayerActionEnum playerAction)
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Draws the next card from the top of the deck into the input hand.
+        /// </summary>
+        /// <param name="hand"></param>
+        public void DrawTopCardIntoHand(HandModel hand)
+        {
+            CardModel topCard = Deck.Cards[0];
+            Deck.Cards.Remove(topCard);
+            hand.Cards.Add(topCard);
         }
     }
 }
