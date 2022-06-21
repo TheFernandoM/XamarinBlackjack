@@ -5,10 +5,10 @@ namespace XamarinBlackjack.Models
 {
     /// <summary>
     /// Data model class representing a player's hand of cards. A "hand of cards"
-    /// is the same as saying a collection of cards (in this case specifically: a list)
+    /// is the same as saying a collection of cards (in this case specifically: a List)
     /// </summary>
     public class HandModel
     {
-        public List<CardModel> Cards { get; set; }
+        public List<CardModel> Cards { get; set; } = new List<CardModel>();
     }
 }

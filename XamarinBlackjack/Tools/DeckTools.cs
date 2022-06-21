@@ -30,7 +30,7 @@ namespace XamarinBlackjack.Tools
                 {
                     // generate a random number for j until it falls between
                     // 0 and i, inclusive
-                    rand.Next(0, deckSize + 1);
+                    j = rand.Next(0, deckSize + 1);
                 }
                 // swap positions of the two cards
                 CardModel temp = deck.Cards[i];

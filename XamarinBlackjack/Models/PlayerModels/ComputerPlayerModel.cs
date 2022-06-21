@@ -6,6 +6,6 @@ namespace XamarinBlackjack.Models.PlayerModels
     /// </summary>
     public class ComputerPlayerModel
     {
-
+        public HandModel Hand { get; set; } = new HandModel();
     }
 }

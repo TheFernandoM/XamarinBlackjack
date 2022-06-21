@@ -10,6 +10,6 @@ namespace XamarinBlackjack.Models
     /// </summary>
     public class Deck
     {
-        public List<CardModel> Cards { get; }
+        public List<CardModel> Cards { get; } = new List<CardModel>();
     }
 }

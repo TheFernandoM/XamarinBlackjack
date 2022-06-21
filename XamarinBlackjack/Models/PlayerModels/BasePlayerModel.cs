@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace XamarinBlackjack.Models
+namespace XamarinBlackjack.Models.PlayerModels
 {
     /// <summary>
-    /// Data model representing a Player and its properties
+    /// WARNING: DEPRECATED
     /// </summary>
+    [Obsolete("This class is not used. This is a case of unnecessary inheritance. " +
+        "Consider deleting this class.")]
     public class BasePlayerModel
     {
-        // Player can have multiple hands. Ex: When they split a pair of cards
         public List<HandModel> Hands { get; set; }
     }
 }
