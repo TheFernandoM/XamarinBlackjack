@@ -3,7 +3,7 @@ A cross-platform Blackjack card game made using Xamarin (Work in progress)
 
 ## WIP
 
-![Image showing work in progress](XamarinBlackjack/XamarinBlackjack/Assets/Images/wip1.png)
+![Image showing work in progress](https://github.com/TheFernandoM/XamarinBlackjack/blob/main/XamarinBlackjack/Assets/Images/wip1.png)
 
 ## Some notes
 ### The value of an Ace (is it 1 or 11?):
