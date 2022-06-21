@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using XamarinBlackjack.Controllers;
 using XamarinBlackjack.Models;
 using XamarinBlackjack.Models.PlayerModels;
+using XamarinBlackjack.Tools;
 
 namespace XamarinBlackjack
 {
@@ -16,6 +17,11 @@ namespace XamarinBlackjack
         // Player objects (data models without behaviors). Computer and User players.
         private ComputerPlayerModel dealerPlayer;
         private UserPlayerModel userPlayer { get; set; }
+
+        /// <summary>
+        /// Player's current active Hand. (Required because the player can have multiple hands after a split)
+        /// </summary>
+        private HandModel ActiveHandPlayer { get; set; }
 
         // UI Frames
         private Frame dealerFrame { get; set; }
@@ -32,7 +38,8 @@ namespace XamarinBlackjack
         }
         private void DealOutRound()
         {
-            // TO DO: THIS SHOULD GO IN GameController, not here
+            // TO DO: Consider putting this logic in GameController, not here
+            // TO DO: It's too tightly coupled (View logic + Business logic coupling)
             int numOfCardsToDealAtTheStart = 2;
 
             // deal cards to dealer
@@ -41,6 +48,8 @@ namespace XamarinBlackjack
                 var card = controller.DrawTopCardIntoHand(dealerPlayer.Hand);
                 DrawCardToFrame(card, dealerFrame, DealerFrameLabel);
             }
+            MiddleFrameDealerValueLabel.Text = $"Dealer hand value: {HandTools.CalculateHandValue(userPlayer.Hands[0])}";
+
 
             // deal cards to player
             for (int i = 0; i < numOfCardsToDealAtTheStart - 1; i++)
@@ -48,6 +57,7 @@ namespace XamarinBlackjack
                 var card = controller.DrawTopCardIntoHand(userPlayer.Hands[0]);
                 DrawCardToFrame(card, playerFrame, PlayerFrameLabel);
             }
+                MiddleFramePlayerValueLabel.Text = $"Player hand value: {HandTools.CalculateHandValue(userPlayer.Hands[0])}";
 
         }
         private void SetUpNewGame()
@@ -77,6 +87,7 @@ namespace XamarinBlackjack
         {
             var card = controller.DrawTopCardIntoHand(userPlayer.Hands[0]);
             DrawCardToFrame(card, playerFrame, PlayerFrameLabel);
+            MiddleFramePlayerValueLabel.Text = $"Player hand value: {HandTools.CalculateHandValue(userPlayer.Hands[0])}";
         }
     }
 }

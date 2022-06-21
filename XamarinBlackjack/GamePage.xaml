@@ -13,7 +13,11 @@
                     <Label TextColor="Black" x:Name="DealerFrameLabel"></Label>
                 </Frame>
                 <Frame BorderColor="Black" x:Name="MiddleFrame">
-                    <Label x:Name="MiddleFrameLabel"></Label>
+                    <StackLayout>
+                        <Label x:Name="MiddleFrameLabel"></Label>
+                        <Label TextColor="Black" x:Name="MiddleFrameDealerValueLabel"></Label>
+                        <Label TextColor="Black" x:Name="MiddleFramePlayerValueLabel"></Label>
+                    </StackLayout>
                 </Frame>
                 <Frame HeightRequest="100" BorderColor="Purple" x:Name="PlayerFrame">
                     <Label TextColor="Black" x:Name="PlayerFrameLabel"></Label>
@@ -21,6 +25,8 @@
                 <Frame  BorderColor="Black" x:Name="PlayerActionFrame">
                     <StackLayout>
                         <Button x:Name="HitButton" Text="HIT ME!" Clicked="HitButton_Clicked"></Button>
+                        <Button x:Name="StandButton" Text="Stand" ></Button>
+                        <Button x:Name="SplitButton" Text="Split" ></Button>
                         <Label TextColor="Black" x:Name="PlayerActionFrameLabel"></Label>
                     </StackLayout>
                 </Frame>

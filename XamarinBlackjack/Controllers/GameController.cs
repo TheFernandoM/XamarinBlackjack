@@ -29,7 +29,7 @@ namespace XamarinBlackjack.Controllers
                 // Merge the current deck with a new full deck of unshuffled cards.
                 Deck = DeckTools.MergeDecks(new List<Deck>() { Deck, DeckTools.FillDeckWithUnshuffledCards(new Deck())});
             }
-            DeckTools.ShuffleDeck(Deck);
+            GenericShuffler.ShuffleList<CardModel>(Deck.Cards);
         }
 
         public void StartGame()

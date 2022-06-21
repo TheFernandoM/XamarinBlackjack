@@ -8,6 +8,7 @@ namespace XamarinBlackjack.Tools
 {
     public static class DeckTools
     {
+        [Obsolete("Made obsolete by GenericShuffler class. Use that instead")]
         /// <summary>
         /// Shuffles a Deck of Cards. Runtime is O(n).
         /// <br></br>
