@@ -17,6 +17,7 @@ namespace XamarinBlackjack
 
         void NewGameButton_Clicked(System.Object sender, System.EventArgs e)
         {
+            Navigation.PushAsync(new NavigationPage(new GamePage()));
         }
     }
 }

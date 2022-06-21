@@ -10,16 +10,19 @@
             </StackLayout>
             <StackLayout>
                 <Frame BorderColor="DarkGreen" x:Name="DealerFrame">
-
+                    <Label TextColor="Black" x:Name="DealerFrameLabel"></Label>
                 </Frame>
                 <Frame BorderColor="Black" x:Name="MiddleFrame">
-
+                    <Label x:Name="MiddleFrameLabel"></Label>
                 </Frame>
-                <Frame BorderColor="Purple" x:Name="PlayerFrame">
-
+                <Frame HeightRequest="100" BorderColor="Purple" x:Name="PlayerFrame">
+                    <Label TextColor="Black" x:Name="PlayerFrameLabel"></Label>
                 </Frame>
-                <Frame BorderColor="Black" x:Name="PlayerActionFrame">
-
+                <Frame  BorderColor="Black" x:Name="PlayerActionFrame">
+                    <StackLayout>
+                        <Button x:Name="HitButton" Text="HIT ME!" Clicked="HitButton_Clicked"></Button>
+                        <Label TextColor="Black" x:Name="PlayerActionFrameLabel"></Label>
+                    </StackLayout>
                 </Frame>
             </StackLayout>
         </StackLayout>
