@@ -20,6 +20,8 @@
     <None Remove="Controllers\" />
     <None Remove="Tools\" />
     <None Remove="Models\PlayerModels\" />
+    <None Remove="Assets\" />
+    <None Remove="Assets\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -27,6 +29,8 @@
     <Folder Include="Controllers\" />
     <Folder Include="Tools\" />
     <Folder Include="Models\PlayerModels\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Assets\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="GamePage.xaml.cs">
