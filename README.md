@@ -1,7 +1,10 @@
 # XamarinBlackjack
 A cross-platform Blackjack card game made using Xamarin (Work in progress)
 
-## WIP
+* [WIP](#work-in-progress-screenshots)
+* [Some notes](#some-notes)
+
+## Work in Progress: Screenshots
 
 ![Image showing work in progress](https://github.com/TheFernandoM/XamarinBlackjack/blob/main/XamarinBlackjack/Assets/Images/wip1.png)
 
