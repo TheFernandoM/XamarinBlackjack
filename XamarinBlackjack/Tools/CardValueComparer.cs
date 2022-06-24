@@ -6,6 +6,12 @@ namespace XamarinBlackjack.Tools
 {
     public static class CardValueComparer
     {
+        /// <summary>
+        /// Returns true if two cards have the same numeric value.
+        /// <br></br>
+        /// Example: (10 and King) returns true
+        /// Example: (Ace and 2) returns false
+        /// </summary>
         public static bool CheckIfTwoCardsAreEqual(CardModel card1, CardModel card2)
         {
             int value1 = GetNumericValueFromCard(card1);
@@ -13,6 +19,9 @@ namespace XamarinBlackjack.Tools
 
             return value1 == value2;
         }
+        /// <summary>
+        /// From a given card, return its numeric (integer) value.
+        /// </summary>
         private static int GetNumericValueFromCard(CardModel card)
         {
             // TO DO: Consider using some sort of pre-populated dictionary of { CardFaceValueEnum : int }
